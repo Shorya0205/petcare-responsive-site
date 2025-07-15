@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🐾 Homepaws Pet Care - Where Love Meets Care</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Box Icons -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Floating Pet Icons -->
+    <div class="floating-pets">
+      <div class="pet-icon pet-dog">🐕</div>
+      <div class="pet-icon pet-cat">🐱</div>
+      <div class="pet-icon pet-bird">🦜</div>
+      <div class="pet-icon pet-fish">🐠</div>
+      <div class="pet-icon pet-rabbit">🐰</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <div class="logo-icon">🐾</div>
+          <div class="logo-text">
+            <span class="logo-title">Homepaws</span>
+            <span class="logo-subtitle">Pet Care</span>
+          </div>
+        </div>
+        
+        <div class="nav-menu" id="nav-menu">
+          <a href="#home" class="nav-link active">
+            <i class='bx bx-home-alt'></i>
+            <span>Home</span>
+          </a>
+          <a href="#services" class="nav-link">
+            <i class='bx bx-heart'></i>
+            <span>Services</span>
+          </a>
+          <a href="#about" class="nav-link">
+            <i class='bx bx-info-circle'></i>
+            <span>About</span>
+          </a>
+          <a href="#products" class="nav-link">
+            <i class='bx bx-shopping-bag'></i>
+            <span>Shop</span>
+          </a>
+          <a href="#contact" class="nav-link">
+            <i class='bx bx-phone'></i>
+            <span>Contact</span>
+          </a>
+        </div>
+        
+        <div class="nav-actions">
+          <button class="appointment-btn" onclick="location.href='#contact'">
+            <i class='bx bx-calendar-check'></i>
+            <span>Book Now</span>
+          </button>
+        </div>
+        
+        <div class="nav-toggle" id="nav-toggle">
+          <i class='bx bx-menu'></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-container">
+        <div class="hero-content" data-aos="fade-right">
+          <div class="hero-badge">
+            <i class='bx bx-heart'></i>
+            <span>Trusted by 10,000+ Pet Parents</span>
+          </div>
+          
+          <h1 class="hero-title">
+            Your Pet's <span class="highlight">Happiness</span> 
+            <br>Is Our <span class="highlight">Mission</span>
+          </h1>
+          
+          <p class="hero-description">
+            From routine check-ups to emergency care, we provide comprehensive veterinary services with love, compassion, and the latest medical technology.
+          </p>
+          
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">
+              <span>Schedule Visit</span>
+              <i class='bx bx-right-arrow-alt'></i>
+            </a>
+            <button class="btn btn-secondary">
+              <i class='bx bx-play-circle'></i>
+              <span>Watch Video</span>
+            </button>
+          </div>
+          
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number">15+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">50K+</span>
+              <span class="stat-label">Happy Pets</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Emergency Care</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-visual" data-aos="fade-left">
+          <div class="hero-image-container">
+            <img src="assets/head.png" alt="Happy Pet" class="hero-image">
+            <div class="hero-image-bg"></div>
+            
+            <!-- Floating Elements -->
+            <div class="floating-card floating-card-1">
+              <i class='bx bx-shield-check'></i>
+              <span>Vaccinated</span>
+            </div>
+            <div class="floating-card floating-card-2">
+              <i class='bx bx-time'></i>
+              <span>24/7 Care</span>
+            </div>
+            <div class="floating-card floating-card-3">
+              <i class='bx bx-star'></i>
+              <span>5-Star Rated</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">
+        <div class="scroll-text">Scroll to explore</div>
+        <div class="scroll-arrow">
+          <i class='bx bx-down-arrow-alt'></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <div class="section-badge">
+            <i class='bx bx-plus-medical'></i>
+            <span>Our Services</span>
+          </div>
+          <h2 class="section-title">Comprehensive Pet Care Services</h2>
+          <p class="section-description">
+            We offer a wide range of veterinary services to keep your beloved pets healthy and happy
+          </p>
+        </div>
+        
+        <div class="services-grid">
+          <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="service-icon">
+              <i class='bx bx-plus-medical'></i>
+            </div>
+            <h3>Emergency Care</h3>
+            <p>24/7 emergency veterinary services for urgent pet health situations</p>
+            <div class="service-features">
+              <span><i class='bx bx-check'></i> Immediate Response</span>
+              <span><i class='bx bx-check'></i> Advanced Equipment</span>
+              <span><i class='bx bx-check'></i> Expert Team</span>
+            </div>
+            <button class="service-btn">Learn More</button>
+          </div>
+          <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-icon">
+              <i class='bx bx-injection'></i>
+            </div>
+            <h3>Vaccination</h3>
+            <p>Complete vaccination programs to protect your pets from diseases</p>
+            <div class="service-features">
+              <span><i class='bx bx-check'></i> Core Vaccines</span>
+              <span><i class='bx bx-check'></i> Customized Schedule</span>
+              <span><i class='bx bx-check'></i> Health Records</span>
+            </div>
+            <button class="service-btn">Learn More</button>
+          </div>
+          
+          <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="service-icon">
+              <i class='bx bx-cut'></i>
+            </div>
+            <h3>Grooming</h3>
+            <p>Professional grooming services to keep your pets clean and beautiful</p>
+            <div class="service-features">
+              <span><i class='bx bx-check'></i> Bath & Trim</span>
+              <span><i class='bx bx-check'></i> Nail Care</span>
+              <span><i class='bx bx-check'></i> Styling</span>
+            </div>
+            <button class="service-btn">Learn More</button>
+          </div>
+          
+          <div class="service-card" data-aos="zoom-in" data-aos-delay="400">
+            <div class="service-icon">
+              <i class='bx bx-food-menu'></i>
+            </div>
+            <h3>Nutrition</h3>
+            <p>Personalized nutrition counseling and dietary recommendations</p>
+            <div class="service-features">
+              <span><i class='bx bx-check'></i> Diet Plans</span>
+              <span><i class='bx bx-check'></i> Weight Management</span>
+              <span><i class='bx bx-check'></i> Supplements</span>
+            </div>
+            <button class="service-btn">Learn More</button>
+          </div>
+          
+          <div class="service-card" data-aos="zoom-in" data-aos-delay="500">
+            <div class="service-icon">
+              <i class='bx bx-brain'></i>
+            </div>
+            <h3>Behavioral</h3>
+            <p>Expert behavioral consultation and training programs</p>
+            <div class="service-features">
+              <span><i class='bx bx-check'></i> Training Programs</span>
+              <span><i class='bx bx-check'></i> Behavior Analysis</span>
+              <span><i class='bx bx-check'></i> Owner Education</span>
+            </div>
+            <button class="service-btn">Learn More</button>
+          </div>
+          
+          <div class="service-card" data-aos="zoom-in" data-aos-delay="600">
+            <div class="service-icon">
+              <i class='bx bx-home-heart'></i>
+            </div>
+            <h3>Boarding</h3>
+            <p>Safe and comfortable boarding facilities for your pets</p>
+            <div class="service-features">
+              <span><i class='bx bx-check'></i> 24/7 Supervision</span>
+              <span><i class='bx bx-check'></i> Comfortable Lodging</span>
+              <span><i class='bx bx-check'></i> Daily Updates</span>
+            </div>
+            <button class="service-btn">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text" data-aos="fade-right">
+            <div class="section-badge">
+              <i class='bx bx-info-circle'></i>
+              <span>About Us</span>
+            </div>
+            <h2 class="section-title">Why Choose Homepaws Pet Care?</h2>
+            <p class="about-description">
+              With over 15 years of experience, we've been dedicated to providing exceptional veterinary care with a personal touch. Our team of passionate professionals treats every pet like family.
+            </p>
+            
+            <div class="about-features">
+              <div class="feature">
+                <div class="feature-icon">
+                  <i class='bx bx-award'></i>
+                </div>
+                <div class="feature-content">
+                  <h4>Certified Experts</h4>
+                  <p>Licensed veterinarians with specialized training</p>
+                </div>
+              </div>
+              
+              <div class="feature">
+                <div class="feature-icon">
+                  <i class='bx bx-time-five'></i>
+                </div>
+                <div class="feature-content">
+                  <h4>24/7 Availability</h4>
+                  <p>Round-the-clock care for emergencies</p>
+                </div>
+              </div>
+              
+              <div class="feature">
+                <div class="feature-icon">
+                  <i class='bx bx-heart'></i>
+                </div>
+                <div class="feature-content">
+                  <h4>Compassionate Care</h4>
+                  <p>Treating every pet with love and respect</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="about-visual" data-aos="fade-left">
+            <div class="about-image-container">
+              <img src="assets/client.jpg" alt="Veterinary Care" class="about-image">
+              <div class="about-stats">
+                <div class="stat-card">
+                  <span class="stat-number">15+</span>
+                  <span class="stat-label">Years</span>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-number">50K+</span>
+                  <span class="stat-label">Pets</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <div class="section-badge">
+            <i class='bx bx-shopping-bag'></i>
+            <span>Pet Shop</span>
+          </div>
+          <h2 class="section-title">Premium Pet Products</h2>
+          <p class="section-description">
+            Discover our curated collection of high-quality pet products and accessories
+          </p>
+        </div>
+        
+        <div class="products-grid">
+          <div class="product-card" data-aos="flip-left" data-aos-delay="100">
+            <div class="product-image">
+              <img src="assets/food.jpg" alt="Pet Product">
+              <div class="product-badge">Best Seller</div>
+            </div>
+            <div class="product-content">
+              <h3>Premium Dog Food</h3>
+              <p>Nutritious and delicious food for your furry friend</p>
+              <div class="product-price">
+                <span class="price">$29.99</span>
+                <span class="original-price">$39.99</span>
+              </div>
+              <button class="product-btn">Add to Cart</button>
+            </div>
+          </div>
+          
+          <div class="product-card" data-aos="flip-left" data-aos-delay="200">
+            <div class="product-image">
+              <img src="assets/acc.jpg" alt="Pet Product">
+              <div class="product-badge">New</div>
+            </div>
+            <div class="product-content">
+              <h3>Pet Accessories</h3>
+              <p>Stylish and functional accessories for your pets</p>
+              <div class="product-price">
+                <span class="price">$49.99</span>
+              </div>
+              <button class="product-btn">Add to Cart</button>
+            </div>
+          </div>
+          
+          <div class="product-card" data-aos="flip-left" data-aos-delay="300">
+            <div class="product-image">
+              <img src="assets/product-3.jpg" alt="Pet Product">
+              <div class="product-badge">Popular</div>
+            </div>
+            <div class="product-content">
+              <h3>Grooming Kit</h3>
+              <p>Complete grooming kit for professional pet care</p>
+              <div class="product-price">
+                <span class="price">$79.99</span>
+                <span class="original-price">$99.99</span>
+              </div>
+              <button class="product-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <div class="section-badge">
+            <i class='bx bx-star'></i>
+            <span>Testimonials</span>
+          </div>
+          <h2 class="section-title">What Pet Parents Say</h2>
+          <p class="section-description">
+            Hear from our satisfied customers about their experience
+          </p>
+        </div>
+        
+        <div class="testimonials-slider" data-aos="fade-up">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="testimonial-rating">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                  </div>
+                  <p class="testimonial-text">
+                    "Homepaws Pet Care saved my dog's life during an emergency. The team was incredibly professional and caring. I couldn't be more grateful!"
+                  </p>
+                  <div class="testimonial-author">
+                    <img src="assets/cf1.jpg" alt="Sarah Johnson">
+                    <div class="author-info">
+                      <h4>Sarah Johnson</h4>
+                      <span>Dog Parent</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="testimonial-rating">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                  </div>
+                  <p class="testimonial-text">
+                    "The grooming services are fantastic! My cat always comes back looking beautiful and happy. Highly recommend!"
+                  </p>
+                  <div class="testimonial-author">
+                    <img src="assets/cm1.jpg" alt="Michael Adams">
+                    <div class="author-info">
+                      <h4>Michael Adams</h4>
+                      <span>Cat Parent</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="testimonial-rating">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                  </div>
+                  <p class="testimonial-text">
+                    "The behavioral consultation helped us understand our puppy better. The training tips were invaluable!"
+                  </p>
+                  <div class="testimonial-author">
+                    <img src="assets/cf2.jpg" alt="Emily Martinez">
+                    <div class="author-info">
+                      <h4>Emily Martinez</h4>
+                      <span>Puppy Parent</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-content">
+          <div class="contact-info" data-aos="fade-right">
+            <div class="section-badge">
+              <i class='bx bx-phone'></i>
+              <span>Contact Us</span>
+            </div>
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-description">
+              Ready to give your pet the care they deserve? Contact us today!
+            </p>
+            
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class='bx bx-map'></i>
+                </div>
+                <div class="contact-text">
+                  <h4>Visit Us</h4>
+                  <p>742 Evergreen Terrace, Springfield, IL 62704, USA</p>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class='bx bx-phone'></i>
+                </div>
+                <div class="contact-text">
+                  <h4>Call Us</h4>
+                  <p>+1 (555) 123-4567</p>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class='bx bx-envelope'></i>
+                </div>
+                <div class="contact-text">
+                  <h4>Email Us</h4>
+                  <p>hello@homepawspetcare.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-form" data-aos="fade-left">
+            <form>
+              <div class="form-group">
+                <input type="text" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Your Email" required>
+              </div>
+              <div class="form-group">
+                <input type="tel" placeholder="Phone Number" required>
+              </div>
+              <div class="form-group">
+                <select required>
+                  <option value="">Select Service</option>
+                  <option value="emergency">Emergency Care</option>
+                  <option value="vaccination">Vaccination</option>
+                  <option value="grooming">Grooming</option>
+                  <option value="consultation">Consultation</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <textarea placeholder="Your Message" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                <span>Send Message</span>
+                <i class='bx bx-send'></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <div class="logo-icon">🐾</div>
+              <div class="logo-text">
+                <span class="logo-title">Homepaws</span>
+                <span class="logo-subtitle">Pet Care</span>
+              </div>
+            </div>
+            <p>Providing exceptional veterinary care with love and compassion since 2009.</p>
+            <div class="social-links">
+              <a href="#"><i class='bx bxl-facebook'></i></a>
+              <a href="#"><i class='bx bxl-instagram'></i></a>
+              <a href="#"><i class='bx bxl-twitter'></i></a>
+              <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+          </div>
+          
+          <div class="footer-links">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#">Emergency Care</a></li>
+              <li><a href="#">Vaccination</a></li>
+              <li><a href="#">Grooming</a></li>
+              <li><a href="#">Nutrition</a></li>
+              <li><a href="#">Behavioral</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Emergency</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2025 Shorya Gupta. All rights reserved.</p>
+          <p>Made with <i class='bx bxs-heart'></i> for pets everywhere</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="control.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
