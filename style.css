@@ -1109,115 +1109,242 @@ body {
 }
 
 @media (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
-        top: 80px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 80px);
-        background: var(--white);
-        flex-direction: column;
-        justify-content: flex-start;
-        padding-top: 2rem;
-        transition: var(--transition);
-        box-shadow: var(--shadow-medium);
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .nav-toggle {
+    .hero-image {
+        max-width: 12px !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 auto 8px auto;
         display: block;
     }
-
-    .hero-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 1rem;
-    }
-
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .hero-stats {
-        justify-content: center;
-    }
-
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .contact-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        text-align: center;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .products-grid {
-        grid-template-columns: 1fr;
-    }
-
     .hero-image-container {
-        justify-content: flex-start; /* Keep image left-aligned on mobile */
-        margin-left: 0.2rem;
+        max-width: 16px !important;
     }
-    .hero-image {
-        max-width: 200px; /* Smaller on mobile */
+    /* TESTIMONIALS: Two cards per row on mobile */
+    .testimonials-slider .swiper-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
     }
-    .floating-card-1 {
-        top: 0%;
-        left: 50%;
-        transform: translateX(-50%);
+    .testimonials-slider .swiper-slide {
+        flex: 0 0 48%;
+        max-width: 48%;
+        min-width: 180px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        height: auto;
     }
-    .floating-card-2 {
-        top: 75%;
-        right: 10%;
+    .testimonial-card {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        min-height: unset;
     }
-    .floating-card-3 {
-        bottom: 2%;
-        left: 20%;
+    /* TESTIMONIALS: Make avatar images small and circular */
+    .testimonial-author img {
+        width: 36px !important;
+        height: 36px !important;
+        min-width: 36px !important;
+        min-height: 36px !important;
+        max-width: 36px !important;
+        max-height: 36px !important;
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        margin: 0;
+    }
+    /* TESTIMONIALS: Make avatar images even smaller and perfectly circular */
+    .testimonial-author img {
+        width: 28px !important;
+        height: 28px !important;
+        min-width: 28px !important;
+        min-height: 28px !important;
+        max-width: 28px !important;
+        max-height: 28px !important;
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        margin: 0;
+        aspect-ratio: 1/1 !important;
+    }
+    /* HERO SECTION: Make heading larger for emphasis */
+    .hero-title {
+        font-size: 1.35rem !important;
+        line-height: 1.2 !important;
+    }
+    .appointment-btn {
+        display: none !important;
+    }
+    .hero-title {
+        font-size: 2rem !important;
+        font-weight: 800 !important;
+        line-height: 1.1 !important;
+        margin-bottom: 0.5rem !important;
+    }
+    .hero {
+        margin-right: 0 !important;
+    }
+    .hero-content {
+        margin: 0 12px !important;
     }
 }
 
 @media (max-width: 480px) {
-    .container {
-        padding: 0 15px;
+    /* TESTIMONIALS: One card per row on very small screens */
+    .testimonials-slider .swiper-slide {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
+}
 
-    .hero-title {
-        font-size: 2rem;
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
     }
-
-    .section-title {
-        font-size: 2rem;
+    .container,
+    .hero-container,
+    .hero-image-container,
+    .about-image-container,
+    .products-grid,
+    .product-card,
+    .testimonials-slider,
+    .testimonial-card,
+    .contact-content,
+    .contact-form,
+    .footer-content {
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
     }
-
-    .hero-buttons {
+    /* Remove margin from body if present */
+    body {
+        margin: 0 !important;
+    }
+    /* Remove left/right margin from .product-card, .testimonial-card, etc. */
+    .product-card, .testimonial-card, .service-card {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    /* Images: always scale to container */
+    .hero-image, .about-image, .product-image img, .testimonial-author img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        display: block;
+        margin: 0 auto;
+    }
+    .hero-image-container, .about-image-container, .product-image {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    /* Remove dead space in hero grid */
+    .hero-container {
+        display: flex;
         flex-direction: column;
+        gap: 12px;
+        padding: 0 0 12px 0;
         align-items: center;
     }
-
-    .btn {
+    /* Section header spacing */
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+    /* About section grid fix */
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+    /* Products grid fix */
+    .products-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+    .product-card {
         width: 100%;
-        max-width: 300px;
-        justify-content: center;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    /* Testimonials grid fix */
+    .testimonials-slider {
+        max-width: 100%;
+        padding: 0 4px;
+    }
+    .testimonial-card {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    /* Contact section fix */
+    .contact-content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+    .contact-form {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+        padding: 12px;
+    }
+    /* Footer compactness */
+    .footer-content {
+        gap: 8px;
+        align-items: center;
+    }
+    .footer-links ul {
+        padding-left: 0;
+    }
+    .footer-bottom {
+        padding-top: 1rem;
+        gap: 2px;
+    }
+    /* Floating cards: stack below image or hide on mobile */
+    .floating-card, .floating-card-1, .floating-card-2, .floating-card-3 {
+        position: static !important;
+        margin: 4px 0 0 0;
+        display: block;
+        width: auto;
+        left: unset !important;
+        right: unset !important;
+        top: unset !important;
+        bottom: unset !important;
+        transform: none !important;
+        animation: none !important;
+    }
+    .hero-image-container {
+        flex-direction: column;
+        gap: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Even more compact for very small screens */
+    .hero-title, .section-title {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    .section-header {
+        margin-bottom: 1rem;
+    }
+    .btn, .section-badge {
+        font-size: 0.9rem;
+        padding: 4px 8px;
+    }
+    .product-card, .testimonial-card, .service-card {
+        padding: 6px;
+        max-width: 98vw;
+    }
+    .footer-content, .footer-bottom {
+        font-size: 0.85rem;
+        gap: 2px;
     }
 }
 
@@ -1252,10 +1379,18 @@ body {
 .testimonials-slider .swiper-wrapper {
     display: flex;
 }
-
 .testimonials-slider .swiper-slide {
+    margin-right: 32px;
     display: flex;
-    height: auto;
+    justify-content: center;
+}
+.testimonial-card {
+    width: 320px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.testimonials-slider .swiper-slide:last-child {
+    margin-right: 0;
 }
 
 .testimonial-card {
@@ -1265,4 +1400,125 @@ body {
     height: 100%;
     min-height: 340px;
     /* You can adjust min-height as needed for your design */
+}
+
+@media (max-width: 768px) {
+    .testimonial-author {
+        overflow: hidden !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .testimonial-author img {
+        width: 28px !important;
+        height: 28px !important;
+        aspect-ratio: 1/1 !important;
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        display: block !important;
+        align-self: center !important;
+        overflow: hidden !important;
+        min-width: 28px !important;
+        min-height: 28px !important;
+        max-width: 28px !important;
+        max-height: 28px !important;
+        margin: 0;
+        box-sizing: border-box !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-author img {
+        width: 40px !important;
+        height: 40px !important;
+        min-width: 40px !important;
+        min-height: 40px !important;
+        max-width: 40px !important;
+        max-height: 40px !important;
+        aspect-ratio: 1/1 !important;
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        display: block !important;
+        align-self: center !important;
+        overflow: hidden !important;
+        margin: 0;
+        box-sizing: border-box !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 16px !important;
+        padding: 12px 0 !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+    }
+    .footer-brand, .footer-links {
+        width: 100% !important;
+        max-width: 100vw !important;
+        text-align: center !important;
+        margin: 0 auto 8px auto !important;
+        box-sizing: border-box !important;
+    }
+    .footer-links ul {
+        padding-left: 0 !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 2px !important;
+        width: 100% !important;
+    }
+    .footer-links li {
+        width: 100% !important;
+        text-align: center !important;
+    }
+    .footer-bottom {
+        width: 100% !important;
+        max-width: 100vw !important;
+        text-align: center !important;
+        padding: 8px 0 !important;
+        font-size: 0.9rem !important;
+        box-sizing: border-box !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block !important;
+        z-index: 1100;
+        position: relative;
+    }
+    .nav-menu {
+        display: none !important;
+        position: absolute;
+        top: 56px;
+        left: 0;
+        width: 100vw;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+        padding: 16px 0 8px 0;
+        transition: left 0.3s;
+    }
+    .nav-menu.active {
+        display: flex !important;
+    }
+    .nav-link {
+        width: 100%;
+        padding: 12px 24px;
+        justify-content: flex-start;
+        font-size: 1.1rem;
+    }
+    /* Hide home icon in place of hamburger */
+    .nav-link i.bx-home-alt {
+        display: none !important;
+    }
 }
